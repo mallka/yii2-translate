@@ -5,15 +5,17 @@ Google, Bing translation component for Yii2, multiple language support, 用于Yi
     Google 以中文简体（zh-CN）和中文繁体（zh-TW）标识
     Bing 以中文简体（zh-Hans）和中文繁体（zh-Hant）标识
 
+## 安装
+    composer require spiritbox/yii2-translate
 
 ## 配置
     'components' => [
         ...
         'translate' => [
-            'class' => 'app\components\translate\Translate',
+            'class' => 'yii2\translate\Translate',
             //'provider' => 'google',//直接配置为google或bing
             'provider' => [
-                'class' => 'app\components\translate\GoogleTranslate', //'class' => 'app\components\translate\BingTranslate',
+                'class' => 'yii2\translate\GoogleTranslate', //'class' => 'yii2\translate\BingTranslate',
                 'url' => 'http://translate.google.cn/translate_a/single', //'url' => 'https://cn.bing.com/ttranslatev3',
                 ],
             ],
