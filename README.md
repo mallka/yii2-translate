@@ -12,10 +12,10 @@ Google, Bing translation component for Yii2, multiple language support, 用于Yi
     'components' => [
         ...
         'translate' => [
-            'class' => 'yii2\translate\Translate',
+            'class' => 'yii\translate\Translate',
             //'provider' => 'google',//直接配置为google或bing
             'provider' => [
-                'class' => 'yii2\translate\GoogleTranslate', //'class' => 'yii2\translate\BingTranslate',
+                'class' => 'yii\translate\GoogleTranslate', //'class' => 'yii\translate\BingTranslate',
                 'url' => 'http://translate.google.cn/translate_a/single', //'url' => 'https://cn.bing.com/ttranslatev3',
             ],
         ],
