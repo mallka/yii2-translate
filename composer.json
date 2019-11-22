@@ -1,0 +1,43 @@
+{
+  "name": "spiritbox/yii2-translate",
+  "description": "Google, Bing translation component for Yii2。基于Yii2框架的Google, Bing翻译组件\n",
+  "keywords": [
+    "yii2",
+    "translate",
+    "google",
+    "bing"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/spiritbox/yii2-translate/issues",
+    "source": "https://github.com/spiritbox/yii2-translate"
+  },
+  "authors": [
+    {
+      "name": "Sue Ryen",
+      "email": "sue@mikr.net"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "yiisoft/yii2": "~2.0.14",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "yii\\translate\\": "src"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
