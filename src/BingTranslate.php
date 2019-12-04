@@ -72,7 +72,7 @@ class BingTranslate extends BaseObject implements TranslateInterface
             $promises = [];
             foreach ($this->target as $target) {
                 $this->options['form_params'] = [
-                    'fromLang' => $this->source,
+                    'fromLang' => $this->normalize($this->source),
                     'text' => $content,
                     'to' => $this->normalize($target),
                 ];
