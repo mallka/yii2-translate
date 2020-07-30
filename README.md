@@ -7,7 +7,8 @@ Translation component for Yii2, multiple language support, html translate suppor
     composer require spiritbox/yii2-translate
     
 ## 备注
-    Google翻译接口可能会被封IP    
+    Google翻译接口可能会被封IP
+    有道翻译网址：https://ai.youdao.com   
 
 ## 配置
     'components' => [
