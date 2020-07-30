@@ -80,7 +80,7 @@ class YoudaoTranslate extends BaseObject implements TranslateInterface
                                 'lang' => $target,
                                 'key' => $k,
                             ];
-                            yield new Request('POST', self::API_URL, [
+                            yield new Request('POST', $this->url, [
                                 'Content-Type' => 'application/x-www-form-urlencoded',
                             ], $this->buildQueryData($text, $target));
                         }
@@ -89,7 +89,7 @@ class YoudaoTranslate extends BaseObject implements TranslateInterface
                             'lang' => $target,
                             'key' => false,
                         ];
-                        yield new Request('POST', self::API_URL, [
+                        yield new Request('POST', $this->url, [
                             'Content-Type' => 'application/x-www-form-urlencoded',
                         ], $this->buildQueryData($content, $target));
                     }
@@ -132,7 +132,7 @@ class YoudaoTranslate extends BaseObject implements TranslateInterface
             }
             return $result;
         } else {
-            $response = $this->client->request('POST', self::API_URL, [
+            $response = $this->client->request('POST', $this->url, [
                 'query' => $this->buildQueryData($content, $this->target),
             ]);
             return $this->handleResponse($response);
@@ -217,10 +217,10 @@ class YoudaoTranslate extends BaseObject implements TranslateInterface
     {
         $curtime = time();
         $salt = $this->_createGuid();
-        $signStr = $this->_appKey . $this->_truncate($text) . $salt . $curtime . $this->_appSecret;
+        $signStr = $this->appKey . $this->_truncate($text) . $salt . $curtime . $this->appSecret;
         $queryParams = [
             'q' => $text,
-            'appKey' => $this->_appKey,
+            'appKey' => $this->appKey,
             'salt' => $salt,
             'from' => $this->source == 'zh-CN' ? 'zh-CHS' : $this->source,
             'to' => $targetLang == 'zh-CN' ? 'zh-CHS' : $targetLang,
