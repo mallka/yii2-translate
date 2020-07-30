@@ -1,7 +1,6 @@
 # yii2-translate
-Translation component for Yii2, multiple language support, html translate support.
-
 用于Yii2的翻译组件，支持同时翻译多种语言， 支持翻译Html。
+Translation component for Yii2, multiple language support, html translate support.
 
 ## 安装
     composer require spiritbox/yii2-translate
