@@ -1,9 +1,7 @@
 # yii2-translate
-Google, Bing translation component for Yii2, multiple language support, 用于Yii2的Google, Bing 翻译组件，支持同时翻译多种语言
+Translation component for Yii2, multiple language support, html translate support.
 
-## 差异
-    Google 以中文简体（zh-CN）和中文繁体（zh-TW）标识
-    Bing 以中文简体（zh-Hans）和中文繁体（zh-Hant）标识
+用于Yii2的翻译组件，支持同时翻译多种语言， 支持翻译Html。
 
 ## 安装
     composer require spiritbox/yii2-translate
@@ -32,3 +30,4 @@ Google, Bing translation component for Yii2, multiple language support, 用于Yi
         ->setSource('en')
         ->setTarget(['zh-CN', 'zh-TW', 'de', 'es', 'it', 'fr'])
         ->transText('Hello World!');
+            

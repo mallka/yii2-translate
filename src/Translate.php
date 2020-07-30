@@ -8,12 +8,20 @@ namespace yii\translate;
 use Yii;
 use yii\base\Component;
 use yii\base\InvalidConfigException;
+use yii\translate\drivers\GoogleTranslate;
+use yii\translate\drivers\YoudaoTranslate;
 
 class Translate extends Component
 {
     public $provider = 'google';
 
     private $_provider = null;
+
+    public function setUrl($url)
+    {
+        $this->getProvider()->setUrl($url);
+        return $this;
+    }
 
     public function setSource($source = null)
     {
@@ -27,15 +35,14 @@ class Translate extends Component
         return $this;
     }
 
-    public function setOptions($options = null)
-    {
-        $this->getProvider()->setOptions($options);
-        return $this;
-    }
-
     public function transText($content)
     {
         return $this->getProvider()->transText($content);
+    }
+
+    public function transHtml($content)
+    {
+        return $this->getProvider()->transHtml($content);
     }
 
     public function getProvider()
@@ -50,8 +57,8 @@ class Translate extends Component
             if (is_string($this->provider)) {
                 if ($this->provider == 'google') {
                     $this->_provider = new GoogleTranslate();
-                } elseif ($this->provider == 'bing') {
-                    $this->_provider = new BingTranslate();
+                } elseif ($this->provider == 'youdao') {
+                    $this->_provider = new YoudaoTranslate();
                 } else {
                     throw new InvalidConfigException('Invalid translate provider config!');
                 }

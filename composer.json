@@ -1,11 +1,11 @@
 {
   "name": "spiritbox/yii2-translate",
-  "description": "Google, Bing translation component for Yii2。基于Yii2框架的Google, Bing翻译组件\n",
+  "description": "Translation component for Yii2。基于Yii2框架的翻译组件\n",
   "keywords": [
     "yii2",
     "translate",
-    "google",
-    "bing"
+    "youdao",
+    "Google"
   ],
   "type": "yii2-extension",
   "license": "BSD-3-Clause",
@@ -22,7 +22,8 @@
   "require": {
     "php": ">=7.1.0",
     "yiisoft/yii2": "~2.0.14",
-    "guzzlehttp/guzzle": "~6.0"
+    "guzzlehttp/guzzle": "~6.5.4",
+    "paquettg/php-html-parser": "~2.2.1"
   },
   "repositories": [
     {
