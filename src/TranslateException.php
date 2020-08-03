@@ -1,8 +1,4 @@
 <?php
-/***
- * 异常
- */
-
 namespace yii\translate;
 
 use yii\base\Exception;

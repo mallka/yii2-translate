@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\translate\drivers;
+namespace yii\translate;
 
 class GoogleTokenGenerator
 {

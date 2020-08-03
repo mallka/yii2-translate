@@ -21,6 +21,7 @@
   ],
   "require": {
     "php": ">=7.1.0",
+    "ext-json": "*",
     "yiisoft/yii2": "~2.0.14",
     "guzzlehttp/guzzle": "~6.5.4",
     "paquettg/php-html-parser": "~2.2.1"

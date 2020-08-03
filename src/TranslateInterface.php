@@ -1,15 +1,8 @@
 <?php
-/***
- * 接口
- */
-
 namespace yii\translate;
 
 interface TranslateInterface
 {
-    //设置翻译接口地址
-    public function setUrl($url);
-
     //设置源语言
     public function setSource($source = null);
 
