@@ -11,7 +11,7 @@ Translation component for Yii2, multiple language support, html translate suppor
 
 ## 配置
     'translate' => [
-        'class' => 'app\translate\GoogleTranslate',
+        'class' => 'yii\translate\GoogleTranslate',
         'url' => 'https://translate.google.cn/translate_a/single',
         'clientOptions' => [
             'timeout' => 3, //单次请求超时时限
@@ -20,12 +20,12 @@ Translation component for Yii2, multiple language support, html translate suppor
     ],
     或
     'translate' => [
-        'class' => 'app\translate\YoudaoTranslate',
+        'class' => 'yii\translate\YoudaoTranslate',
         'clientOptions' => [
             'timeout' => 3, //单次请求超时时限
             'concurrency' => 10, //并发请求数
         ],
-         'options' => [
+        'options' => [
             'app_key' => '******',//有道应用ID
             'app_secret' => '******',//有道应用密钥
         ],
